@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () async {
               AssetsAudioPlayer player = AssetsAudioPlayer.newPlayer();
               await player.open(
-                Audio("assets/fuwa.mp3"),
+                Audio("assets/haramiFuwa.mp3"),
               );
               await player.play();
             },
