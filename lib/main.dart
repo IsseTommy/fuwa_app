@@ -27,36 +27,22 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.pinkAccent,
+      backgroundColor: Color.fromRGBO(249, 248, 0, 1),
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              RaisedButton(
-                onPressed: () async {
-                  AssetsAudioPlayer player = AssetsAudioPlayer.newPlayer();
-                  await player.open(
-                    Audio("assets/fuwa.mp3"),
-                  );
-                  await player.play();
-                },
-                child: Image.asset(
-                  "assets/fuwa.jpg",
-                  width: width * 0.8,
-                ),
-                color: Colors.pinkAccent,
-              ),
-              Text(
-                "フワちゃん\nでーす！",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w900,
-                  fontSize: 40,
-                ),
-              ),
-            ],
+          child: RaisedButton(
+            onPressed: () async {
+              AssetsAudioPlayer player = AssetsAudioPlayer.newPlayer();
+              await player.open(
+                Audio("assets/fuwa.mp3"),
+              );
+              await player.play();
+            },
+            child: Image.asset(
+              "assets/harami.png",
+              width: width * 0.9,
+            ),
+            color: Color.fromRGBO(249, 248, 0, 1),
           ),
         ),
       ),
