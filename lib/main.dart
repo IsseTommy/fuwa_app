@@ -43,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: width * 0.9,
             ),
             color: Color.fromRGBO(249, 248, 0, 1),
+            elevation: 0.0,
           ),
         ),
       ),
